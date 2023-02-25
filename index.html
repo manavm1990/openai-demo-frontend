@@ -2,18 +2,40 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <!-- TODO: Add favicon. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" href="./src/style.css" />
-    <title>Vite ➕ Tailwind</title>
+    <title>Name Pet with Open API</title>
   </head>
-  <body>
-    <h1
-      class="text-center text-3xl font-semibold text-red-500 md:text-5xl"
-    >
-      Hello
-    </h1>
+  <body class="py-8 px-4">
+    <div
+      id="bg"
+      before="🐶 🐱 🐦 🐴 🐍 🐹 🦜 🕷️ 🐟 🐠 🐡 🐬 🐳 🐋 🐊 🐆 🐅 🐃 🐂 🐄 🐪 🐫 🐘 🐐 🐏 🐑 🐎 🐖 🐀 🐁 🐓 🦃 🕊️ 🐕 🐩 🐈 🐈‍⬛ 🐇 🐿️ 🦔 🦇 🐻 🐨 🐼 🐾 🦁 🐯 🐮 🐷 🐗 🐽 🐸 🐊 🐢 🦎 🐍 🦕 🦖 🐙 🦑 🦐 🦀 🐠 🐟 🐡 🐬 🦈 🐳 🐋 🐊 🐆 🐅 🐃 🐂 🐄 🐪 🐫 🐘 🐐 🐏 🐑 🐎 🐖 🐀 🐁 🐓 🦃 🕊️ 🐕 🐩 🐈 🐈‍⬛ 🐇 🐿️ 🦔 🦇 🐻 🐨 🐼 🐾 🦁 🐯 🐮 🐷 🐗 🐽 🐸 🐊 🐢 🦎 🐍 🦕 🦖 🐙 🦑 🦐 🦀 🐠 🐟 🐡 🐬 🦈 🐳 🐋 🐊 🐆 🐅 🐃 🐂 🐄 🐪 🐫 🐘 🐐 🐏 🐑 🐎 🐖 🐀 🐁 🐓 🦃 🕊️ 🐕 🐩 🐈 🐈‍⬛ 🐇 🐿️ 🦔 🦇 🐻 🐨 🐼 🐾 🦁 🐯 🐮 🐷 🐗 🐽 🐸 🐊 🐢 🦎 🐍 🦕"
+      class="absolute -z-10 h-screen text-center text-8xl tracking-tighter opacity-20 before:content-[attr(before)]"
+    ></div>
+    <header>
+      <h1 class="text-center text-5xl font-bold">Name My Pet</h1>
+    </header>
+
+    <main class="mt-8">
+      <form class="flex flex-col gap-y-2 items-center">
+        <label for="pet-select">Choose a pet:</label>
+
+        <select name="pets" id="pet-select">
+          <option value="">--Please choose an option--</option>
+          <option value="dog">Dog</option>
+          <option value="cat">Cat</option>
+          <option value="hamster">Hamster</option>
+          <option value="parrot">Parrot</option>
+          <option value="spider">Spider</option>
+          <option value="goldfish">Goldfish</option>
+        </select>
+
+        <button type="submit" class="bg-blue-500 text-white p-2 rounded mt-2">
+          Name My Pet
+        </button>
+      </form>
+    </main>
 
     <script type="module" src="./src/index.js"></script>
   </body>
