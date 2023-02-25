@@ -12,10 +12,9 @@ initSelectListener((val) => {
 
   bg.classList.add("animate-pulse");
 
-  fetch("http://localhost:3000/val")
+  fetch(`http://localhost:3000/${val}`)
     .then((res) => res.json())
     .then((data) => {
-      console.log("done fetching");
       renderers.renderList(ol, data.completion.split(", "));
     })
     .catch((err) => {
