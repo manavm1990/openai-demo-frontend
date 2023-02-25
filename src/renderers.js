@@ -1,8 +1,9 @@
 export default {
-  renderList(data, parent) {
-    parent.innerHTML = data.map((item) => `<li>${item}</li>`).join();
+  renderList(parent, data) {
+    parent.innerHTML = data.map((item) => `<li>${item}</li>`).join("\n");
   },
-  renderError(msg, parent) {
+
+  renderError(parent, msg = "🥅 Some Other Error") {
     parent.innerText = msg
   }
 }
