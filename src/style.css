@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  li {
+    @apply border-y py-4 font-semibold first:border-t-0 first:text-3xl;
+  }
+
+  li:nth-child(2) {
+    @apply text-2xl;
+  }
+
+  li:nth-child(3) {
+    @apply border-b-0 text-xl;
+  }
+}
